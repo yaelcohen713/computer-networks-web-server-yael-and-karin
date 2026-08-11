@@ -1,0 +1,21 @@
+Use these raw requests with netcat (nc 127.0.0.1 8080).
+Press Enter twice after the request headers.
+
+VALID REQUEST
+GET /index.html HTTP/1.0
+Host: localhost
+
+MALFORMED REQUEST - EXPECT 400
+THIS IS NOT HTTP
+
+FORBIDDEN DIRECTORY - EXPECT 403
+GET /private/secret.txt HTTP/1.0
+Host: localhost
+
+DIRECTORY TRAVERSAL - EXPECT 403
+GET /../server.py HTTP/1.0
+Host: localhost
+
+MISSING FILE - EXPECT 404
+GET /does-not-exist.html HTTP/1.0
+Host: localhost

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SocketLab Web Server</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">COMPUTER NETWORKS PROJECT</p>
+      <h1>Multi-Threaded HTTP/1.0 Server</h1>
+      <p>This page is served directly from a Python TCP socket without Flask, Django, or another web framework.</p>
+      <div class="actions">
+        <a href="/pages/about.html">How it works</a>
+        <a class="secondary" href="/documents/info.txt">Read server facts</a>
+      </div>
+    </div>
+    <img src="/images/network.svg" alt="Network illustration">
+  </header>
+
+  <main>
+    <section class="cards">
+      <article><h2>Low-level sockets</h2><p>The server creates, binds, listens, accepts, receives, and sends using Python's socket API.</p></article>
+      <article><h2>Concurrent clients</h2><p>Every accepted connection is handled by a separate worker thread.</p></article>
+      <article><h2>Safe file serving</h2><p>Only approved folders can be accessed, and directory traversal attempts are blocked.</p></article>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/pages/contact.html">Project details</a>
+  </footer>
+</body>
+</html>
